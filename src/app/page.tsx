@@ -1,9 +1,10 @@
+import Nav from "./component/nav"
+
+
 export default function Page(){
     return (
-        <header> 
-
-
-        </header>
+        <Nav />
+        
 
     )
 }
