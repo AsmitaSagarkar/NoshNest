@@ -1,21 +1,40 @@
+"use client";
 import Link from "next/link";
-export default function Nav(){
-    return(
+import { usePathname } from "next/navigation";
 
-        <header className="grid grid-cols-2 m-4 text-xl p-4"> 
+const midNavLink = [
+    {href : "/",label : "Home"},
+    {href : "/menu",label : "Menu"},
+    {href : "/about",label : "About"},
+    {href : "/contact",label : "Contact"},
+  
+  ]
+export default function Nav(){
+    const pathName = usePathname();
+    return(
+        <header className="grid grid-cols-3 m-4 text-xl p-4"> 
             <div className="flex text-emerald-600">
-                <Link href={""}>Nosh Nest</Link>
+                <Link href={"/"}>Nosh Nest</Link>
             </div>
 
-            <nav className="flex justify-end gap-4 text-gray-600 mr-8 items-center">
-                <Link href={""}>Home</Link>
-                <Link href={""}>Menu</Link>
-                <Link href={""}>About</Link>
-                <Link href={""}>Contact</Link>
-                <Link href={""} className="border-2 border-gray-600 rounded-full px-5">Login</Link>
-            </nav>
+            <div className="flex justify-center gap-6  mr-8 items-center">
+                {midNavLink.map((link) =>{
+              const isActive =pathName.startsWith(link.href);
+                  return (
+                    <Link href={link.href} key= {link.label}  className={isActive ? "text-emerald-600" : "text-gray-600"}>{link.label}</Link>
+                  )
+                })}
+                
+            </div>
+
+            <div className="flex justify-end gap-5 items-center">
+                <Link href={"/login"}>Login</Link>
+                <button className="bg-emerald-500 text-gray-900 py-1 px-3 rounded-full"><Link href={"/register"}>Register</Link></button>
+            </div>
 
 
         </header>
+
     )
+    
 }

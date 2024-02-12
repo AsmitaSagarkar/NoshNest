@@ -1,6 +1,7 @@
-
+import Menu from "./menu";
 export default function Main(){
     return(
+        <>
         <div className="grid grid-cols-2">
 
             <div className="flex flex-col justify-center items-left ml-8 gap-4 mt-14">
@@ -14,6 +15,11 @@ export default function Main(){
                 <img src={"../deliveryboy.jpg"} alt= "Loading..." className="w-96 h-96 rounded-full"/>
 
             </div>
+        
         </div>
+
+        <Menu />
+        </>
+
     )
 }
