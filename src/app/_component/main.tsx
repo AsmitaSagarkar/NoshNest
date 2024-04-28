@@ -1,4 +1,4 @@
-import Menu from "./menu";
+
 export default function Main(){
     return(
         <>
@@ -18,7 +18,7 @@ export default function Main(){
         
         </div>
 
-        <Menu />
+        
         </>
 
     )

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Nav from "./component/nav";
+import Nav from "./_component/nav";
 
 
 export const metadata: Metadata = {
