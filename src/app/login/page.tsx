@@ -1,8 +1,7 @@
 "use client";
-import RestaurantSignUp from "../_component/restaurantsingup";
-import RestaurantLogin from "../_component/restaurantlogin";
+import RestaurantSignUp from "../_component/Restaurantsingup";
+import RestaurantLogin from "../_component/Restaurantlogin";
 import { useState } from "react";
-
 
 const Login =() =>{
     const [login,setLogin] = useState(false);

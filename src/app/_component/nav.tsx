@@ -19,7 +19,7 @@ export default function Nav(){
 
             <div className="flex justify-center gap-6  mr-8 items-center">
                 {midNavLink.map((link) =>{
-              const isActive =pathName.startsWith(link.href);
+                 const isActive =pathName.startsWith(link.href);
                   return (
                     <Link href={link.href} key= {link.label}  className={isActive ? "text-emerald-600" : "text-gray-600"}>{link.label}</Link>
                   )
@@ -29,7 +29,7 @@ export default function Nav(){
 
             <div className="flex justify-end gap-5 items-center">
                 <Link href={"/login"}>Login</Link>
-                <button className="bg-emerald-500 text-gray-900 py-1 px-3 rounded-full"><Link href={"/register"}>Register</Link></button>
+               
             </div>
 
 
